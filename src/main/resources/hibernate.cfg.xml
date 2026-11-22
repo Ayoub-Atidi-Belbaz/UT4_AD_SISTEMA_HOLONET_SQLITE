@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="connection.url">jdbc:sqlite:holonet.db</property>
+        <property name="connection.username"></property>
+        <property name="connection.password"></property>
+
+        <property name="dialect">org.hibernate.community.dialect.SQLiteDialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+
+        <mapping class="ut4.sqlite.modelo.Planeta"/>
+        <mapping class="ut4.sqlite.modelo.Nave"/>
+        <mapping class="ut4.sqlite.modelo.CazaLigero"/>
+        <mapping class="ut4.sqlite.modelo.DestructorEstelar"/>
+    </session-factory>
+</hibernate-configuration>
